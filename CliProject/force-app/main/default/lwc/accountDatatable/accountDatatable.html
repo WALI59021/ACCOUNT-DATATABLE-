@@ -1,0 +1,34 @@
+<template>
+    <!-- PLEASE READ THE BELOW COMMENTS  -->
+    <div>
+        <lightning-datatable if:true={Accounts.data}
+            key-field="id"
+            data={Accounts.data}
+            columns={columns}
+            onrowaction={handleRowAction}>   <!--I THINK HERE I SHALL BE LAUNCING THE VIEW ACITON BUT NOT SURE HOT TO -->
+            <template for:each={accounts.data} for:item="actObj" for:index="index">            
+            <a href="#" onclick={handleClick} data-accountid={actObj.Id}>{actObj.Name}</a>
+
+        </lightning-datatable>
+    </div>
+
+
+    <lightning-layout-item padding="around-small" size="10">
+        <c-contact-records-list account-id={accountidfrmparent}></c-contact-records-list> 
+    </lightning-layout-item>
+
+    <!--accountidfrmparent:: this is variable on js file getting its value from the event that shall be launched when click on view action here am getting failed on how to launch the action now   -->
+
+     <!--accountidfrmparent:: this is variable on js file getting its value from the event that shall be launched when click on view action here am getting failed on how to launch the action now   -->
+</template>
+
+
+
+
+
+
+
+
+
+
+
